@@ -6,6 +6,6 @@ from apps.funcionarios.models import Funcionario
 class Documento(models.Model):
 	descricao = models.CharField(max_length=100)
 	criadoPor = models.ForeignKey(Funcionario, on_delete=models.PROTECT)
-
+	documento = models.FileField(upload_to='documentos')
 	def __str__(self):
 		return self.descricao
