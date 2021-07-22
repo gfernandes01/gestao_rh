@@ -90,6 +90,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, "static"),
 
 # Login Redirect URL - Direção que o Usuário vai, após login
 LOGIN_REDIRECT_URL = 'home'
