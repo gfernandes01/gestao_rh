@@ -9,7 +9,7 @@ SECRET_KEY = 'django-insecure-6&%ft0u1n^5c*&)2)_k1nm1bh+%hu@nnjpv69sq-72=-)b2%3z
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['3.138.70.255']
+ALLOWED_HOSTS = ['3.138.70.255', '127.0.0.1']
 
 # Application definition
 INSTALLED_APPS = [
@@ -87,10 +87,10 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images) - https://docs.djangoproject.com/en/3.2/howto/static-files/
 STATIC_URL = '/static/'
-#STATICFILES_DIRS = [
-#    os.path.join(BASE_DIR, "static"),
-#]
-STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "staticfiles")] # Para mexer na máquina local
+
+STATIC_ROOT = os.path.join(BASE_DIR, "static/") # Para fazer PULL AWS
 
 # Login Redirect URL - Direção que o Usuário vai, após login
 LOGIN_REDIRECT_URL = 'home'
